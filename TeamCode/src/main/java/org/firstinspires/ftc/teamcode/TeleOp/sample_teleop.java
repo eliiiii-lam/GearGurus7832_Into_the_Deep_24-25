@@ -40,6 +40,8 @@ public class sample_teleop extends LinearOpMode {
     private DcMotorEx motor ;
     private DcMotorEx uppies ;
 
+    private DcMotorEx uppies1;
+
 
     boolean slowMode = false;
 
@@ -77,6 +79,8 @@ public class sample_teleop extends LinearOpMode {
 
         motor = hardwareMap.get(DcMotorEx.class, "Arm");
         uppies = hardwareMap.get(DcMotorEx.class,"uppies");
+        uppies1 = hardwareMap.get(DcMotorEx.class,"uppies1");
+
 
         Servo outRot = hardwareMap.servo.get("outRot");
         Servo outClaw = hardwareMap.servo.get("outClaw");
@@ -85,6 +89,8 @@ public class sample_teleop extends LinearOpMode {
 
         frontRightMotor.setDirection(DcMotorSimple.Direction.REVERSE);
         backRightMotor.setDirection(DcMotorSimple.Direction.REVERSE);
+
+        uppies1.setDirection(DcMotorSimple.Direction.REVERSE);
 
         outRot.setDirection(Servo.Direction.REVERSE);
 
@@ -158,6 +164,7 @@ public class sample_teleop extends LinearOpMode {
 
             controller1.setPID(p1,i1,d1);
             int armPos1 = uppies.getCurrentPosition();
+
             double pid1 = controller1.calculate(armPos1, target1);
             double ff1 = Math.cos(Math.toRadians(target1/ticks_in_degrees)) * f1;
 
@@ -173,10 +180,12 @@ public class sample_teleop extends LinearOpMode {
 
             if (gamepad2.a) {
                 inPiv.setPosition(0.15);
-                inY.setPosition(0.25);//lower claw to "observe mode"
+                inY.setPosition(0.29);//lower claw to "observe mode"
                 linkL.setPosition(0.25);
                 linkR.setPosition(0.25);
             }
+
+
 
             if (gamepad2.b){
                 inY.setPosition(0.7);//bring claw back
@@ -191,9 +200,9 @@ public class sample_teleop extends LinearOpMode {
                 inClaw.setPosition(0.51);//close claw
 
                 target1 = 1150;
-                target = -1130;
+                target = -1230;
                 inY.setPosition(0.69);//bring claw back
-                inPiv.setPosition(0.19);
+                inPiv.setPosition(0.1);
                 linkL.setPosition(0.56);
                 linkR.setPosition(0.56);
             }
@@ -202,7 +211,7 @@ public class sample_teleop extends LinearOpMode {
                 inClaw.setPosition(0.4);
                 outRot.setPosition(0.32);
 
-                target1 = 2500;
+                target1 = 2650;
                 target = -260;
             }
 
@@ -216,8 +225,12 @@ public class sample_teleop extends LinearOpMode {
                 uppies.setPower(0);
                 motor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
                 uppies.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+                uppies1.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+
                 motor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
                 uppies.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+                uppies1.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+
 
 
             }
@@ -248,7 +261,7 @@ public class sample_teleop extends LinearOpMode {
             }
 
             if (gamepad2.dpad_up){
-               target1 = 975;
+               target1 = 920;
             }
 
             if (gamepad2.dpad_right){
@@ -264,6 +277,8 @@ public class sample_teleop extends LinearOpMode {
             //main code here
             motor.setPower(power); //setting the motor to the desired position
             uppies.setPower(power1); //setting the motor to the desired position
+            uppies1.setPower(power1); //setting the motor to the desired position
+
 
 
             telemetry.addData("pos ", armPos);

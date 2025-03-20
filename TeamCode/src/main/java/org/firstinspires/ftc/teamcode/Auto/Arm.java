@@ -21,6 +21,8 @@ public class Arm {
     public int setPosition;
 
     public DcMotorEx uppies;
+    public DcMotorEx uppies1;
+
     public int setPosition1;
 
     Servo linkL;
@@ -40,6 +42,7 @@ public class Arm {
         Arm.setZeroPowerBehavior(DcMotorEx.ZeroPowerBehavior.BRAKE);
 
         uppies = hardwareMap.get(DcMotorEx.class, "uppies");
+        uppies1 = hardwareMap.get(DcMotorEx.class, "uppies1");
 
         uppies.setZeroPowerBehavior(DcMotorEx.ZeroPowerBehavior.BRAKE);
 
