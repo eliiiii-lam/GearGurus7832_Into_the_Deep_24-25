@@ -171,8 +171,8 @@ public class BAL extends LinearOpMode {
 
             ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
             if (gamepad2.a) {
-                inPiv.setPosition(0.15);
-                inY.setPosition(0.25);//lower claw to "observe mode"
+                inPiv.setPosition(0.38);
+                inY.setPosition(0.39);//lower claw to "observe mode"
                 linkL.setPosition(0.25);
                 linkR.setPosition(0.25);
             }
