@@ -59,34 +59,24 @@ public class TheHolyGrail extends LinearOpMode {
                 .setReversed(true)
 
                 .splineToConstantHeading(new Vector2d(17,30), Math.toRadians(270))
-//                .splineToLinearHeading(new Pose2d(17,15, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
-//                .setReversed(false)
-//                .splineToLinearHeading(new Pose2d(27,12, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
-//                .lineToY(48)
+//
                 .splineToConstantHeading(new Vector2d(18,15), Math.toRadians(270))
-                .splineToConstantHeading(new Vector2d(40,10), Math.toRadians(270))
-                .splineToConstantHeading(new Vector2d(38 ,50), Math.toRadians(270))
+                .splineToConstantHeading(new Vector2d(33,10), Math.toRadians(270))
+                .splineToConstantHeading(new Vector2d(35 ,45), Math.toRadians(270))
                /// /////////////////////////////////////////////////////////////////////////
-
-                .splineToConstantHeading(new Vector2d(17,15), Math.toRadians(270))
-                .splineToConstantHeading(new Vector2d(30,15), Math.toRadians(270))
-                .splineToConstantHeading(new Vector2d(45,10), Math.toRadians(270))
-                .splineToConstantHeading(new Vector2d(47 ,50), Math.toRadians(270))
-
-                .waitSeconds(6)
-
+                .setTangent(-60)
+                .splineToConstantHeading(new Vector2d(23,23), Math.toRadians(270))
+                .splineToConstantHeading(new Vector2d(25,22), Math.toRadians(270))
+                .splineToConstantHeading(new Vector2d(51,15), Math.toRadians(270))
+                .splineToConstantHeading(new Vector2d(52,45), Math.toRadians(270))
+/// /////////////////////////////////////////////////////////////////////////////////////////
+                .setTangent(-75)
+                .splineToConstantHeading(new Vector2d(30,17), Math.toRadians(270))
+                .splineToConstantHeading(new Vector2d(50,13), Math.toRadians(260))
+                .splineToConstantHeading(new Vector2d(51 ,45), Math.toRadians(260))
                 /////////////////////////////////////////////////////////////////////////////////////////////
-                .splineToLinearHeading(new Pose2d(17,15, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
-                .splineToLinearHeading(new Pose2d(23,10, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
-                .splineToLinearHeading(new Pose2d(28,50, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
-
-
-                .splineToLinearHeading(new Pose2d(15,15, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
-                .splineToLinearHeading(new Pose2d(20,12, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
-                .splineToLinearHeading(new Pose2d(30,10, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
-                .splineToLinearHeading(new Pose2d(32,40, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
-
-//                .lineToY(47)
+                .strafeToLinearHeading(new Vector2d(38,50), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
+                .lineToY(55)
 //                /////////////////////////////////////////////////////////////////////////////////////////////
 //                .splineToLinearHeading(new Pose2d(28, 15, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
 //                .splineToLinearHeading(new Pose2d(45, 10, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))

@@ -58,18 +58,18 @@ public class redone extends LinearOpMode {
                 .stopAndAdd(arm.armDown())
                 .setReversed(true)
 
-                .splineToLinearHeading(new Pose2d(17,30, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
-                .splineToLinearHeading(new Pose2d(17,15, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
+                .splineToLinearHeading(new Pose2d(17.75,30, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
+                .splineToLinearHeading(new Pose2d(18,15, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
                 .setReversed(false)
-                .splineToLinearHeading(new Pose2d(27,12, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
+                .splineToLinearHeading(new Pose2d(28.5,12, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
                 .lineToY(48)
                 /////////////////////////////////////////////////////////////////////////////////////////////
                 .splineToLinearHeading(new Pose2d(18,15, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
-                .splineToLinearHeading(new Pose2d(38,10, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
+                .splineToLinearHeading(new Pose2d(38,13, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
                 .lineToY(47)
                 /////////////////////////////////////////////////////////////////////////////////////////////
-                .splineToLinearHeading(new Pose2d(28, 15, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
-                .splineToLinearHeading(new Pose2d(45, 10, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
+                .splineToLinearHeading(new Pose2d(26, 15, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
+                .splineToLinearHeading(new Pose2d(46, 13, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
                 .lineToY(47)
                 ////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////
