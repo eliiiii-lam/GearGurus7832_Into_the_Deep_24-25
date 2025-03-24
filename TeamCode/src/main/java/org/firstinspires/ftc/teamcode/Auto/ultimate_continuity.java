@@ -1,22 +1,46 @@
-package com.example.meepmeep_run;
+package org.firstinspires.ftc.teamcode.Auto;
 
+import com.acmerobotics.roadrunner.Action;
+import com.acmerobotics.roadrunner.ParallelAction;
 import com.acmerobotics.roadrunner.Pose2d;
+import com.acmerobotics.roadrunner.SequentialAction;
+import com.acmerobotics.roadrunner.SleepAction;
+import com.acmerobotics.roadrunner.TrajectoryActionBuilder;
+import com.acmerobotics.roadrunner.TranslationalVelConstraint;
 import com.acmerobotics.roadrunner.Vector2d;
-import com.noahbres.meepmeep.MeepMeep;
-import com.noahbres.meepmeep.roadrunner.DefaultBotBuilder;
-import com.noahbres.meepmeep.roadrunner.entity.RoadRunnerBotEntity;
+import com.acmerobotics.roadrunner.ftc.Actions;
+import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorEx;
+
+import org.firstinspires.ftc.teamcode.MecanumDrive;
+
+@Autonomous(name = "Ultimate Continuity")
+public class ultimate_continuity extends LinearOpMode {
+    @Override
+    public void runOpMode() {
+        //Start position for RED
+        Pose2d initialPose = new Pose2d(-10, 61.5, Math.toRadians(270));
+        MecanumDrive drive = new MecanumDrive(hardwareMap, initialPose);
+
+        Arm arm = new Arm(hardwareMap);
+        //  resetRuntime();
+
+        DcMotorEx motor = hardwareMap.get(DcMotorEx.class, "Arm");
+
+        if (gamepad2.right_stick_button){
+
+            motor.setPower(0);
+            motor.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+            motor.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
 
 
-public class MyClass {
-    public static void main(String[] args) {
-        MeepMeep meepMeep = new MeepMeep(800);
+        }
 
-        RoadRunnerBotEntity myBot = new DefaultBotBuilder(meepMeep)
-                // Set bot constraints: maxVel, maxAccel, maxAngVel, maxAngAccel, track width
-                .setConstraints(60, 60, Math.toRadians(180), Math.toRadians(180), 15)
-                .build();
+        waitForStart();
 
-        myBot.runAction(myBot.getDrive().actionBuilder(new Pose2d(-10, 61.5, Math.toRadians(270)))
+        TrajectoryActionBuilder spec1 = drive.actionBuilder(initialPose)
                 .lineToY(33)
                 .setReversed(true)
 
@@ -65,14 +89,40 @@ public class MyClass {
 
 
 
+                ;
 
-                .build());
 
 
-        meepMeep.setBackground(MeepMeep.Background.FIELD_INTO_THE_DEEP_JUICE_DARK)
-                .setDarkMode(true)
-                .setBackgroundAlpha(0.95f)
-                .addEntity(myBot)
-                .start();
+
+
+
+
+
+
+
+
+
+
+
+        Action TrajectoryClose = spec1.endTrajectory().build();
+
+
+        if (isStopRequested()) return;
+
+
+
+
+        Actions.runBlocking(
+
+
+                new ParallelAction(
+                        arm.lockIntake(),
+                        spec1.build(),
+                        arm.UpdatePID()
+
+                )
+
+
+        );
     }
 }

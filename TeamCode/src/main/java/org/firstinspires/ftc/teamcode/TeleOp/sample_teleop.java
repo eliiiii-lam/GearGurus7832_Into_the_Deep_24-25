@@ -261,11 +261,11 @@ public class sample_teleop extends LinearOpMode {
             }
 
             if (gamepad2.dpad_up){
-               target1 = 920;
+               target1 = 990;
             }
 
             if (gamepad2.dpad_right){
-                target1 = target1 - 20;
+                target1 = target1 - 1;
 
             }
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
