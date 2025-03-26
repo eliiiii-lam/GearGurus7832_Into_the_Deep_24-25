@@ -124,7 +124,7 @@ public class Arm {
         @Override
         public boolean run(@NonNull TelemetryPacket packet) {
 
-            outClaw.setPosition(0.23);
+            outClaw.setPosition(0.35);
 
 
 
@@ -181,7 +181,7 @@ public class Arm {
         @Override
         public boolean run(@NonNull TelemetryPacket packet) {
 
-            outClaw.setPosition(0.67);
+            outClaw.setPosition(0.68);
             inX.setPosition(0.5); // Set to neutral if joystick is idle
 
 

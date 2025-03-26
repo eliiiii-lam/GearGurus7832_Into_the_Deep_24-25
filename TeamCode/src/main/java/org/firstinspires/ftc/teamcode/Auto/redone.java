@@ -10,12 +10,13 @@ import com.acmerobotics.roadrunner.TranslationalVelConstraint;
 import com.acmerobotics.roadrunner.Vector2d;
 import com.acmerobotics.roadrunner.ftc.Actions;
 import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 
 import org.firstinspires.ftc.teamcode.MecanumDrive;
-
+@Disabled
 @Autonomous(name = "5 redone")
 public class redone extends LinearOpMode {
     @Override
@@ -48,7 +49,7 @@ public class redone extends LinearOpMode {
                 .stopAndAdd(arm.armUp())
                 .afterTime(0,arm.SetPosition(-475))
                 .stopAndAdd(arm.closeClaw())
-                .lineToY(30)
+                .lineToY(32)
 
                 .afterTime(0,arm.SetPosition(-800))
 
@@ -58,22 +59,22 @@ public class redone extends LinearOpMode {
                 .stopAndAdd(arm.armDown())
                 .setReversed(true)
 
-                .splineToLinearHeading(new Pose2d(17.75,30, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
-                .splineToLinearHeading(new Pose2d(18,15, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
+                .splineToLinearHeading(new Pose2d(20,40, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
+                .splineToLinearHeading(new Pose2d(21,15, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
                 .setReversed(false)
-                .splineToLinearHeading(new Pose2d(28.5,12, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
+                .splineToLinearHeading(new Pose2d(30,12, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
                 .lineToY(48)
                 /////////////////////////////////////////////////////////////////////////////////////////////
-                .splineToLinearHeading(new Pose2d(18,15, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
+                .splineToLinearHeading(new Pose2d(13,32, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
                 .splineToLinearHeading(new Pose2d(38,13, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
                 .lineToY(47)
                 /////////////////////////////////////////////////////////////////////////////////////////////
-                .splineToLinearHeading(new Pose2d(26, 15, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
+                .splineToLinearHeading(new Pose2d(22, 20, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
                 .splineToLinearHeading(new Pose2d(46, 13, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
                 .lineToY(47)
                 ////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////
-                .strafeToLinearHeading(new Vector2d(26,62), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
+                .strafeToLinearHeading(new Vector2d(19,61.5), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
                 .stopAndAdd(arm.closeClaw())
                 .waitSeconds(0.15)
                 .afterTime(0,arm.SetPosition(-400))
@@ -85,7 +86,7 @@ public class redone extends LinearOpMode {
                 .afterTime(0.3,arm.SetPosition(0))
                 .stopAndAdd(arm.armDown())
 ////////////////////////////////////////////////////////////////////////////////////////
-                .strafeToLinearHeading(new Vector2d(26,61.5), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
+                .strafeToLinearHeading(new Vector2d(19,61.5), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
                 .stopAndAdd(arm.closeClaw())
                 .waitSeconds(0.15)
                 .afterTime(0,arm.SetPosition(-475))
@@ -97,7 +98,7 @@ public class redone extends LinearOpMode {
                 .afterTime(0.3,arm.SetPosition(0))
                 .stopAndAdd(arm.armDown())
 ////////////////////////////////////////////////////////////////////////////////////////
-                .strafeToLinearHeading(new Vector2d(26,61.5), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
+                .strafeToLinearHeading(new Vector2d(19,61.5), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
                 .stopAndAdd(arm.closeClaw())
                 .waitSeconds(0.15)
                 .afterTime(0,arm.SetPosition(-475))
@@ -109,7 +110,7 @@ public class redone extends LinearOpMode {
                 .afterTime(0.3,arm.SetPosition(0))
                 .stopAndAdd(arm.armDown())
 ////////////////////////////////////////////////////////////////////////////////////////
-                .strafeToLinearHeading(new Vector2d(26,61.5), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
+                .strafeToLinearHeading(new Vector2d(19,61.5), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
                 .stopAndAdd(arm.closeClaw())
                 .waitSeconds(0.15)
                 .afterTime(0,arm.SetPosition(-475))
