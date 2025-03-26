@@ -56,9 +56,9 @@ public class TheHolyGrail extends LinearOpMode {
                 .stopAndAdd(arm.armDown())
                 .setReversed(true)
 
-                .splineToConstantHeading(new Vector2d(17,34), Math.toRadians(270))
-                .splineToConstantHeading(new Vector2d(17,25), Math.toRadians(270))
-                .splineToConstantHeading(new Vector2d(17,18), Math.toRadians(270))
+                .splineToConstantHeading(new Vector2d(16.5,34), Math.toRadians(270))
+                .splineToConstantHeading(new Vector2d(16.5,25), Math.toRadians(270))
+                .splineToConstantHeading(new Vector2d(16.5,18), Math.toRadians(270))
 
                 .splineToConstantHeading(new Vector2d(33,12), Math.toRadians(270))
                 .splineToConstantHeading(new Vector2d(35 ,45), Math.toRadians(270))
@@ -73,8 +73,7 @@ public class TheHolyGrail extends LinearOpMode {
                 .splineToConstantHeading(new Vector2d(31,35), Math.toRadians(250))
                 .splineToConstantHeading(new Vector2d(32,30), Math.toRadians(250))
                 .splineToConstantHeading(new Vector2d(52,17), Math.toRadians(250))
-                .setTangent(-10)
-                .splineToConstantHeading(new Vector2d(52,45), Math.toRadians(250))
+                .splineToConstantHeading(new Vector2d(60,50), Math.toRadians(250))
                 /////////////////////////////////////////////////////////////////////////////////////////////
                 .strafeToLinearHeading(new Vector2d(19,56), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
                 .strafeToLinearHeading(new Vector2d(19,61), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
@@ -84,13 +83,13 @@ public class TheHolyGrail extends LinearOpMode {
 //////////////////////////////////////////////////////////////////////////////////////////
                 .stopAndAdd(arm.closeClaw())
                 .waitSeconds(0.15)
-                .afterTime(0,arm.SetPosition(-400))
+                .afterTime(0,arm.SetPosition(-440))
                 .stopAndAdd(arm.armUp())
                 .strafeToLinearHeading(new Vector2d(-23,31), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
                 .afterTime(0,arm.SetPosition(-800))
                 .waitSeconds(0.1)
                 .stopAndAdd(arm.openClaw())
-                .afterTime(0.3,arm.SetPosition(0))
+                .afterTime(0.8,arm.SetPosition(0))
                 .stopAndAdd(arm.armDown())
 ////////////////////////////////////////////////////////////////////////////////////////
                 .strafeToLinearHeading(new Vector2d(19,56), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
@@ -98,13 +97,13 @@ public class TheHolyGrail extends LinearOpMode {
 
                 .stopAndAdd(arm.closeClaw())
                 .waitSeconds(0.15)
-                .afterTime(0,arm.SetPosition(-475))
+                .afterTime(0,arm.SetPosition(-440))
                 .stopAndAdd(arm.armUp())
                 .strafeToLinearHeading(new Vector2d(-21,35), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
                 .afterTime(0,arm.SetPosition(-800))
                 .waitSeconds(0.1)
                 .stopAndAdd(arm.openClaw())
-                .afterTime(0.3,arm.SetPosition(0))
+                .afterTime(0.8,arm.SetPosition(0))
                 .stopAndAdd(arm.armDown())
 ////////////////////////////////////////////////////////////////////////////////////////
                 .strafeToLinearHeading(new Vector2d(19,56), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
@@ -112,20 +111,20 @@ public class TheHolyGrail extends LinearOpMode {
 
                 .stopAndAdd(arm.closeClaw())
                 .waitSeconds(0.15)
-                .afterTime(0,arm.SetPosition(-475))
+                .afterTime(0,arm.SetPosition(-440))
                 .stopAndAdd(arm.armUp())
                 .strafeToLinearHeading(new Vector2d(-19,35), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
                 .afterTime(0,arm.SetPosition(-800))
                 .waitSeconds(0.1)
                 .stopAndAdd(arm.openClaw())
-                .afterTime(0.3,arm.SetPosition(0))
+                .afterTime(0.8,arm.SetPosition(0))
                 .stopAndAdd(arm.armDown())
 ////////////////////////////////////////////////////////////////////////////////////////
                 .strafeToLinearHeading(new Vector2d(19,56), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
                 .strafeToLinearHeading(new Vector2d(19,61.5), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
                 .stopAndAdd(arm.closeClaw())
                 .waitSeconds(0.15)
-                .afterTime(0,arm.SetPosition(-475))
+                .afterTime(0,arm.SetPosition(-440))
                 .stopAndAdd(arm.armUp())
                 .strafeToLinearHeading(new Vector2d(-18,35), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
                 .afterTime(0,arm.SetPosition(-800))
@@ -134,7 +133,7 @@ public class TheHolyGrail extends LinearOpMode {
                 .afterTime(1.2,arm.SetPosition(0))
                 .stopAndAdd(arm.armDown())
                 .setTangent(45)
-                .splineToLinearHeading(new Pose2d(50, 60, Math.toRadians(270)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 7))
+                .strafeToLinearHeading(new Vector2d(50,60), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 7))
 
 
 ////////////////////////////////////////////////////////////////////////////////////////
