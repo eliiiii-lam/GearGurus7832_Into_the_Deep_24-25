@@ -277,7 +277,7 @@ public class sample_teleop extends LinearOpMode {
             //main code here
             motor.setPower(power); //setting the motor to the desired position
             uppies.setPower(power1); //setting the motor to the desired position
-            uppies1.setPower(power1); //setting the motor to the desired position
+            //uppies1.setPower(power1); //setting the motor to the desired position
 
 
 
