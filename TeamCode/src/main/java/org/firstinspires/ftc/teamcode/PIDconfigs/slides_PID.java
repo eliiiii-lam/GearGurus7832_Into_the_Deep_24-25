@@ -15,8 +15,8 @@ import com.qualcomm.robotcore.hardware.DcMotorSimple;
 @TeleOp
 public class slides_PID extends OpMode {
     private PIDController controller1;
-    public static double p1 = 0.06, i1 = 0.01, d1 = 0.0001;
-    public static double f1 = 0.09;
+    public static double p1 = 0, i1 = 0, d1 = 0;
+    public static double f1 = 0;
     public static int target1;
 
     private final double ticks_in_degrees1 = 14.64; //change the 360 back to 180 if no work

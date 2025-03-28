@@ -24,7 +24,7 @@ public class BAL extends LinearOpMode {
     public static double f = 0.08;
 
 
-    public static int target;
+    public static int target = -700;
     //public int target;
 
 
@@ -144,7 +144,7 @@ public class BAL extends LinearOpMode {
 
             if (gamepad2.left_bumper) {
 
-                inY.setPosition(0.16);//lower claw to ground-level
+                inY.setPosition(0.2);//lower claw to ground-level
                 inPiv.setPosition(0.2);
             }
 

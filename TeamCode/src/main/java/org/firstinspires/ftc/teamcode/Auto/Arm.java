@@ -140,10 +140,10 @@ public class Arm {
         @Override
         public boolean run(@NonNull TelemetryPacket packet) {
 
-            linkL.setPosition(0.5);
-            linkR.setPosition(0.5);
+            linkL.setPosition(0.53);
+            linkR.setPosition(0.53);
             inClaw.setPosition(0.3);
-            inY.setPosition(0.7);//bring claw back
+            inY.setPosition(0.83);//bring claw back
             inPiv.setPosition(0.4);
 
 
@@ -278,5 +278,22 @@ public class grab implements Action {
     }
     public Action clawTilt() {
         return new Arm.clawTilt();
+    }
+    ////////////////////////////////////////////////////////////////////
+    public class resetpiddd implements Action {
+        @Override
+        public boolean run(@NonNull TelemetryPacket packet) {
+
+            Arm.setPower(0);
+            uppies.setPower(0);
+            Arm.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+            uppies.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+            Arm.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+            uppies.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+            return false;
+        }
+    }
+    public Action resetpiddd() {
+        return new Arm.resetpiddd();
     }
 }
