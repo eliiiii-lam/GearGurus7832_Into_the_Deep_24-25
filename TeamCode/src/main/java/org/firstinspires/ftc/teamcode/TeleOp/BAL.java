@@ -143,9 +143,8 @@ public class BAL extends LinearOpMode {
             }
 
             if (gamepad2.left_bumper) {
-
-                inY.setPosition(0.2);//lower claw to ground-level
-                inPiv.setPosition(0.2);
+                inPiv.setPosition(0.3);
+                inY.setPosition(0.28);//lower claw to ground level
             }
 
 

@@ -16,6 +16,8 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 
 import org.firstinspires.ftc.teamcode.MecanumDrive;
+@Disabled
+
 @Autonomous(name = "5 redone")
 public class redone extends LinearOpMode {
     @Override

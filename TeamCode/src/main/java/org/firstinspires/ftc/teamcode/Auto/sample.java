@@ -33,6 +33,7 @@ public class sample extends LinearOpMode {
         DcMotorEx uppies = hardwareMap.get(DcMotorEx.class, "uppies");
 
 
+
         waitForStart();
 
         TrajectoryActionBuilder spec1 = drive.actionBuilder(initialPose)
@@ -89,8 +90,7 @@ public class sample extends LinearOpMode {
                 .afterTime(0.5, sig.SetPosition1(1150))
 
 
-
-                .splineToLinearHeading(new Pose2d(-67,49.75, Math.toRadians(230)), Math.toRadians(270), new TranslationalVelConstraint(MecanumDrive.PARAMS.maxProfileAccel * 3.9))
+                .strafeToLinearHeading(new Vector2d(-67,49.75), Math.toRadians(230))
                 .stopAndAdd(arm.clawTilt())
                 .stopAndAdd(arm.extendIn())
                 .waitSeconds(1)

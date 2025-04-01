@@ -5,6 +5,7 @@ import com.acmerobotics.dashboard.FtcDashboard;
 import com.acmerobotics.dashboard.config.Config;
 import com.acmerobotics.dashboard.telemetry.MultipleTelemetry;
 import com.arcrobotics.ftclib.controller.PIDController;
+import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -19,12 +20,11 @@ public class slides_PID extends OpMode {
     public static double f1 = 0;
     public static int target1;
 
-    private final double ticks_in_degrees1 = 14.64; //change the 360 back to 180 if no work
+    private final double ticks_in_degrees1 = 1425.1/360.0;; //change the 360 back to 180 if no work
 
 
 
     private DcMotorEx uppies ;
-    private DcMotorEx uppies1 ;
 
 
 
@@ -35,9 +35,7 @@ public class slides_PID extends OpMode {
         telemetry = new MultipleTelemetry(telemetry, FtcDashboard.getInstance().getTelemetry());
 
         uppies = hardwareMap.get(DcMotorEx.class, "uppies");
-        uppies1 = hardwareMap.get(DcMotorEx.class, "uppies1");
 
-        uppies1.setDirection(DcMotorSimple.Direction.REVERSE);
 
 
 
@@ -63,7 +61,6 @@ public class slides_PID extends OpMode {
 
 
         uppies.setPower(power1); //setting the motor to the desired position
-        uppies1.setPower(power1);
 
 
         telemetry.addData("pos ", armPos1);
