@@ -252,10 +252,8 @@ public class BAL extends LinearOpMode {
             }
 
             if (gamepad2.dpad_right){
-                outRot.setPosition(0.32);
-
-                outClaw.setPosition(0.68);
-                target = -750; // changed
+                inPiv.setPosition(0.1);
+                inY.setPosition(0.28);//lower claw to ground level
             }
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 

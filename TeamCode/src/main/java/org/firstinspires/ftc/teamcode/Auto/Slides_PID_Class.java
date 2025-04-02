@@ -8,6 +8,7 @@ public class Slides_PID_Class {
     public static double f1 = 0.2;
 
 
+
     public static int target1;
 
     public static final double ticks_in_degrees = (1425.1/360); //change the 360 back to 180 if no work
