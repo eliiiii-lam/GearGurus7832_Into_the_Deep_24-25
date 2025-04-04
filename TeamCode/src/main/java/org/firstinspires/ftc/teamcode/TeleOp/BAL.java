@@ -24,6 +24,7 @@ public class BAL extends LinearOpMode {
     public static double f = 0.08;
 
 
+
     public static int target = -700;
     //public int target;
 
@@ -31,7 +32,7 @@ public class BAL extends LinearOpMode {
     private PIDController controller1;
     public static double p1 = 0.008, i1 = 0, d1 = 0;
     public static double f1 = 0.2;
-
+    
 
     public static int target1;
 
@@ -184,26 +185,11 @@ public class BAL extends LinearOpMode {
             }
 
             if (gamepad2.x){
-                outRot.setPosition(0.32);
 
-                target1 = 1020;
-                target = -1150;
-                outClaw.setPosition(0.5);
-                inY.setPosition(0.69);//bring claw back
-                inPiv.setPosition(0.15);
-                linkL.setPosition(0.53);
-                linkR.setPosition(0.53);
-                inClaw.setPosition(0.51);//close claw
             }
 
             if (gamepad2.y){
-                inClaw.setPosition(0.4);
-                outClaw.setPosition(0.65);
-                sleep(100);
-                outRot.setPosition(0.32);
 
-                target1 = 2400;
-                target = -260;
             }
 
 
@@ -252,8 +238,8 @@ public class BAL extends LinearOpMode {
             }
 
             if (gamepad2.dpad_right){
-                inPiv.setPosition(0.1);
-                inY.setPosition(0.28);//lower claw to ground level
+                inPiv.setPosition(0.12);
+                inY.setPosition(0.2);//lower claw to ground level
             }
             ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
