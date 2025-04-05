@@ -185,7 +185,9 @@ public class BAL extends LinearOpMode {
             }
 
             if (gamepad2.x){
-
+                outRot.setPosition(0.32);
+                target = 900;
+                target1 = -40;
             }
 
             if (gamepad2.y){
