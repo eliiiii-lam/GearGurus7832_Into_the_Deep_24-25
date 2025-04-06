@@ -200,7 +200,7 @@ public class sample_teleop extends LinearOpMode {
                 inClaw.setPosition(0.51);//close claw
 
                 target1 = 1150;
-                target = -1230;
+                target = -1130;
                 inY.setPosition(0.69);//bring claw back
                 inPiv.setPosition(0.1);
                 linkL.setPosition(0.56);
@@ -209,7 +209,7 @@ public class sample_teleop extends LinearOpMode {
 
             if (gamepad2.y){
                 inClaw.setPosition(0.4);
-                outRot.setPosition(0.32);
+//                outRot.setPosition(0.32);
 
                 target1 = 2650;
                 target = -260;
@@ -256,7 +256,7 @@ public class sample_teleop extends LinearOpMode {
 
 
             if (gamepad2.dpad_left){
-                outClaw.setPosition(0.65);
+                outClaw.setPosition(0.68);
 
             }
 
